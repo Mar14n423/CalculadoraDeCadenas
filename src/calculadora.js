@@ -1,4 +1,7 @@
 function calcularSumaCadena(cadena) {
-    return 0;
-  }
-  export default calcularSumaCadena;
+    if(cadena.length === 0){
+        return 0;
+    }
+    return parseInt(cadena);
+}
+export default calcularSumaCadena;

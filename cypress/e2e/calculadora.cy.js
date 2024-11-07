@@ -5,4 +5,11 @@ describe("Calculadora de cadena ", () => {
         cy.get("#sumar-button").click();
         cy.get("#resultado-div").should('contain', '0');
     });
+
+    it("Si, el usuario ingresa un numero, se Ddeberia retornar ese mismo numero" , () => {
+        cy.visit("/");
+        cy.get("#cadena-sumar").clear().type("5");
+        cy.get("#sumar-button").click();
+        cy.get("#resultado-div").should('contain', '5');
+    });
 });
