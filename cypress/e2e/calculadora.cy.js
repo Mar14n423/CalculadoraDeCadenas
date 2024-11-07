@@ -18,5 +18,11 @@ describe("Calculadora de cadena ", () => {
         cy.get("#sumar-button").click();
         cy.get("#resultado-div").should('contain', '7');
     });
+    it("cuando el usuario ingrese la operacion de multiples numeros entonces deberia sumar", () => {
+        cy.visit("/");
+        cy.get("#cadena-sumar").type("1,3,5");
+        cy.get("#sumar-button").click();
+        cy.get("#resultado-div").should('contain', '9');
+    });
 
 });
