@@ -18,4 +18,7 @@ describe("Sumar digitos", () => {
   it("Numeros mayores a 1000 se ignoran", () => {
     expect(calcularSumaCadena("10001,2-3-13")).toEqual(18);
   });
+  it("Agregar delimitador especificado", () => {
+    expect(calcularSumaCadena("//[;] 6,3-2;1")).toEqual(12);
+  });
 });

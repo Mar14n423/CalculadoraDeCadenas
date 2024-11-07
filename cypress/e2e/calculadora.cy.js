@@ -36,5 +36,11 @@ describe("Calculadora de cadena ", () => {
         cy.get("#sumar-button").click();
         cy.get("#resultado-div").should('contain', '10');
     });
+    it("Si el usuario ingresa la cadena con un numero y un delimitador especifico debe retornar la suma de la cadena", () => {
+        cy.visit("/");
+        cy.get("#cadena-sumar").type("//[;] 6,3-2;1");
+        cy.get("#sumar-button").click();
+        cy.get("#resultado-div").should('contain', '12');
+    });
 
 });
