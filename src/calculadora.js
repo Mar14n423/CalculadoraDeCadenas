@@ -1,18 +1,12 @@
 function calcularSumaCadena(cadena) {
     let suma = 0;
-    let anchoCadena = cadena.length
-    let indice = 0;
     if(cadena.length === 0){
         return 0;
     }
-    if(cadena.length === 1)
-        return parseInt(cadena);
-      
-    while(indice <= anchoCadena){
-        suma += parseInt(cadena[indice]);
-        indice += 2;
+    const numeros = cadena.split(/[,-]/);
+    for (let i = 0; i < numeros.length; i++) {
+        suma += parseInt(numeros[i]);
     }
-    
     return suma;
 }
 export default calcularSumaCadena;

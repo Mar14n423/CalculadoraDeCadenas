@@ -12,4 +12,7 @@ describe("Sumar digitos", () => {
   it("Si la cadena tiene varios numeros, convertirlos a entero y retonar la suma", () => {
     expect(calcularSumaCadena("5,2,3,6")).toEqual(16);
   });
+  it("La cadena tambien puede separarse por guion", () => {
+    expect(calcularSumaCadena("2,2-3-7")).toEqual(14);
+  });
 });
