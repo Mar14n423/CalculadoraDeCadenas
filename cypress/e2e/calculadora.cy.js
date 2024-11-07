@@ -30,5 +30,11 @@ describe("Calculadora de cadena ", () => {
         cy.get("#sumar-button").click();
         cy.get("#resultado-div").should('contain', '9');
     });
+    it("Si el usuario ingresa la cadena con un numero mayor a 1000 se ignora y debe retornar la suma de la cadena sin ese valor", () => {
+        cy.visit("/");
+        cy.get("#cadena-sumar").type("1003,3-7");
+        cy.get("#sumar-button").click();
+        cy.get("#resultado-div").should('contain', '10');
+    });
 
 });

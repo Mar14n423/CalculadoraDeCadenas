@@ -5,7 +5,8 @@ function calcularSumaCadena(cadena) {
     }
     const numeros = cadena.split(/[,-]/);
     for (let i = 0; i < numeros.length; i++) {
-        suma += parseInt(numeros[i]);
+        if(numeros[i] <= 1000)
+            suma += parseInt(numeros[i]);
     }
     return suma;
 }
